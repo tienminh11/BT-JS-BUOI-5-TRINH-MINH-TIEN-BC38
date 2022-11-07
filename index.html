@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Bài tập 1 -->
+    <h1>Bài 1:</h1>
+    <h3>Sơ đồ 3 khối</h3>
+    <p>
+      * INPUT: Nhập vào điểm chuẩn, điểm thi của 3 môn, chọn vùng và đối tượng
+      được cộng điểm
+    </p>
+    <ol>
+      *PROCESS:
+      <li>Nhập điểm chuẩn điểm thi 3 môn và chọn vùng, đối tượng cộng điểm</li>
+      <li>Cho chọn vùng phù hợp với số điểm được cộng</li>
+      <li>Cho chọn đối tượng phù hợp với điểm được cộng</li>
+      <li>
+        Tính cộng thức: <br />
+        - Nếu 1 trong 3 điểm môn thi bằng 0 thì xuất ra kết quả "Rớt" <br />
+        - Nếu tổng điểm 3 môn lớn hơn điểm chuẩn thì xuất ra kết quả "Đậu"
+        <br />
+        - Còn thấp hơn sẽ xuất ra kết quả "Rớt" <br />
+      </li>
+      <li>Xuất kết Quả</li>
+    </ol>
+    <p>* OUTPUT: Xuất ra số điểm và kết quả</p>
+    <hr />
+    <input id="point" type="text" placeholder="Điểm chuẩn" />
+    <input id="exemScore1" type="text" placeholder="Điểm môn 1" />
+    <input id="exemScore2" type="text" placeholder="Điểm môn 2" />
+    <input id="exemScore3" type="text" placeholder="Điểm môn 3" />
+    <select name="zone" id="zone">
+      <option value="A" id="a">A</option>
+      <option value="B" id="b">B</option>
+      <option value="C" id="c">C</option>
+    </select>
+    <select name="people" id="people">
+      <option value="people1" id="people1">1</option>
+      <option value="people2" id="people2">2</option>
+      <option value="people3" id="people3">3</option>
+    </select>
+    <button onclick="result()">Kết Quả</button>
+    <div id="info"></div>
+    <hr />
+    <br />
+    <!-- Bài tập 2 -->
+    <h1>Bài 2:</h1>
+    <h3>Sơ đồ 3 khối</h3>
+    <p>* INPUT: Nhập vào tên và số Kw</p>
+    <ol>
+      *PROCESS:
+      <li>Nhập vào tên và số Kw</li>
+      <li>
+        Tính cộng thức: <br />
+        - Dưới 50Kw = Số Kw được nhập * 500đ<br />
+        - Trên 50Kw = 500 * 50 + 650 * (Số Kw được nhập - 50);<br />
+        - Trên 100Kw = 500 * 50 + 650 * 50 + 850 * (Số Kw được nhập - 150)<br />
+        - Trên 150Kw = 500 * 50 + 650 * 50 + 850 * 100 + 1100 * (Số Kw được nhập
+        - 200);<br />
+        - Còn lại = 500 * 50 + 650 * 50 + 850 * 100 + 1100 * 150 + 1300 * (Số Kw
+        được nhập - 350);<br />
+      </li>
+      <li>Xuất kết Quả</li>
+    </ol>
+    <p>* OUTPUT: Xuất ra tên và tiền điện</p>
+    <hr />
+    <input type="text" placeholder="Nhập tên" id="name" />
+    <input type="text" placeholder="Nhập Kw tiêu thụ" id="electricity" />
+    <button onclick="electricityBill()">Tính tiền</button>
+    <div id="info1"></div>
+    <hr />
+    <br />
+    <!-- Bài tập 3 -->
+    <h1>Bài 3:</h1>
+    <h3>Sơ đồ 3 khối</h3>
+    <p>* INPUT: Nhập vào tên, thu nhập năm và số người phụ thuộc</p>
+    <ol>
+      *PROCESS:
+      <li>Nhập vào tên, tổng thu nhập năm và số người phụ thuộc</li>
+      <li>
+        Tính cộng thức: <br />
+        - Thu nhập chịu thuế = tổng thu nhập năm -4tr - số người phụ thuộc *
+        1.6tr<br />
+        - Đến 60tr = Thu nhập chịu thuế * 0.05 ;<br />
+        - Trên 60 đến 120 = 60tr * 0.05 + (Thu nhập chịu thuế - 60tr) * 0.1;<br />
+        - Trên 120 đến 210 = 60tr * 0.05 + 60tr * 0.1 + (Thu nhập chịu thuế -
+        120tr) * 0.15;<br />
+        - Trên 210 đến 384 = 60tr * 0.05 + 60tr * 0.1 + 120tr * 0.15 + (Thu nhập
+        chịu thuế - 210tr) * 0.2;<br />
+        - Trên 384 đến 624 =60tr * 0.05 + 60tr * 0.1 +120tr * 0.15 +210tr * 0.2
+        + (Thu nhập chịu thuế - 384tr) * 0.25; <br />
+        - Trên 624 đến 960 = 60tr * 0.05 + 60tr * 0.1 +120tr * 0.15 +210tr* 0.2
+        +384tr * 0.25 +(Thu nhập chịu thuế - 624tr) * 0.3; <br />
+        - Trên 960 = 60tr * 0.05 + 60tr * 0.1 +120tr * 0.15 + 210tr * 0.2 +
+        384tr * 0.25 + 624tr * 0.3 + (Thu nhập chịu thuế - 960tr) * 0.35;<br />
+      </li>
+      <li>Xuất kết Quả</li>
+    </ol>
+    <p>* OUTPUT: Xuất ra tên và xuất ra thuế thu nhập cá nhân</p>
+    <hr />
+    <input type="text" placeholder="Nhập họ tên" id="fullName" />
+    <input type="text" placeholder="Tổng thu nhập năm" id="salaryOfYear" />
+    <input type="text" placeholder="Số người phụ thuộc" id="numberOfPeople" />
+    <button onclick="totalIncome()">Kết Quả</button>
+    <div id="info2"></div>
+
+    <hr />
+    <br />
+    <!-- Bài tập 4 -->
+    <h1>Bài 4:</h1>
+    <h3>Sơ đồ 3 khối</h3>
+    <p>
+      * INPUT: Chọn loại khách hàng và nhập vào mã khách hàng, số kênh cao cấp
+      và số kết nối
+    </p>
+    <ol>
+      *PROCESS:
+      <li>
+        Chọn loại khách hàng và nhập vào mã khách hàng, số kênh cao cấp và số
+        kết nối
+      </li>
+      <li>
+        Tính cộng thức: <br />
+        - Nếu khách hàng là nhà dân: Hóa đơn = phí xử lý hóa đơn + phí dịch vụ
+        cơ bản + (số kênh cao cấp * 7.5$) <br />
+        - Nếu khách hàng là doanh nghiệp: <br />
+        + Nếu số kết nối >= 10: Hóa đơn = phí xử lý hóa đơn + (phí dịch vụ cơ
+        bản * số kết nối) + (số kênh cao cấp * 50$) <br />
+        + Còn lại: Hóa đơn = phí xử lý hóa đơn + (75$ * 10) + (số kết nối - 10)
+        *5$ + (số kênh cao cấp * 50$)<br />
+      </li>
+      <li>Xuất kết Quả</li>
+    </ol>
+    <p>* OUTPUT: Xuất ra mã khách hàng và số tiền trên hóa đơn</p>
+    <hr />
+    <select name="" id="infomation">
+      <option value="Doanh Nghiệp" id="company">Doanh Nghiệp</option>
+      <option value="Nhà Dân" id="guest">Nhà Dân</option>
+    </select>
+    <input type="text" placeholder="Nhập mã khách hàng" id="guestCode" />
+    <input type="text" placeholder="Số kênh cao cấp" id="premiumChannel" />
+    <input type="text" placeholder="Số kết nối" id="connectionNumber" />
+    <button onclick="price()">Kết Quả</button>
+    <div id="info3"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
